@@ -16,29 +16,23 @@ class MainActivity : AppCompatActivity() {
 
 
     /** Called when the user taps the Send button */
-    fun sendMessage(view: View) {
-        val editText = findViewById<EditText>(R.id.editTextPersonName)
-        val message = editText.text.toString()
-        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
-        }
-        startActivity(intent)
-    }
-
-
-    /** Called when the user taps the Guldo Button
     fun sendMessageGuldo(view: View) {
-        val editText = findViewById<EditText>(R.id.editText)
-        val message = editText.text.toString()
+        val editText = findViewById<EditText>(R.id.editTextPersonName)
+        val message = editText.text.toString() + "buttonGuldo"
         val intent = Intent(this, DisplayMessageActivity::class.java).apply {
             putExtra(EXTRA_MESSAGE, message)
         }
         startActivity(intent)
     }
 
-
-    /** Called when the user taps the Vegeta Button */
+    /** Called when the user taps the Send button */
     fun sendMessageVegeta(view: View) {
-        // Do something in response to button
-    }*/
+        val editText = findViewById<EditText>(R.id.editTextPersonName)
+        val message = editText.text.toString()  + "buttonVegeta"
+        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE, message)
+        }
+        startActivity(intent)
+    }
+
 }

@@ -14,6 +14,18 @@ class DisplayMessageActivity : AppCompatActivity() {
 
         // Capture the layout's TextView and set the string as its text
         val textView = findViewById<TextView>(R.id.textView)
-        textView.text = message
+        if ((message == "dorianbuttonGuldo") || (message == "DorianbuttonGuldo")||(message == "sebastienbuttonVegeta") || (message == "SebastienbuttonVegeta"))
+        {
+            textView.text = "Bravo, c est correct!!"
+        }
+        else if ((message == "dorianbuttonVegeta") || (message == "DorianbuttonVegeta")||(message == "sebastienbuttonGuldo") || (message == "SebastienbuttonGuldo"))
+        {
+            textView.text = "Non, ca ne correspond pas."
+        }
+        else
+        {
+            textView.text = "Desole, je ne connais pas cette personne."
+        }
+
     }
 }
